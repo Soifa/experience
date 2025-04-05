@@ -14,7 +14,7 @@
         margin: 0;
         font-size: 16px;
       }
-      
+
       .webInfo {
         width: 100vw;
       }
@@ -31,7 +31,7 @@
         flex: 2;
         max-width: 20%;
       }
-      
+
       .intro h1 {
         font-family: "Kirang Haerang", system-ui;
         font-size: 8em;
@@ -115,7 +115,7 @@
         display: block;
         margin: 0 auto;
       }
-      
+
       .nav-bar {
         position: fixed;
         top: 0;
@@ -124,7 +124,51 @@
         /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
       }
 
-      ul {
+      .experience-box {
+        background-color: #FEBACB;
+        width: 300px;
+        height: 120px;
+        border-radius: 30px;
+        padding: 1em;
+        font-family: "Kite One", sans-serif;
+        font-size: 1.5em;
+        color: black;
+        transition: all 0.4s ease;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .experience-box:hover {
+        height: auto;
+        width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .experience-summary {
+        text-align: center;
+      }
+
+      .experience-details {
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.4s ease;
+        font-size: 0.7em;
+        margin-top: 1em;
+      }
+
+      .experience-box:hover .experience-details {
+        opacity: 1;
+        max-height: 1000px;
+      }
+
+      .experience-details ul {
+        padding-left: 1.2em;
+        list-style-type: disc;
+        margin: 0;
+      }
+      
+
+      .nav-bar ul {
         list-style-type: none;
         overflow: hidden;
         display: flex;
@@ -133,11 +177,17 @@
         padding: 1em 2em;
       }
 
-      li {
+      .nav-bar li {
         float: left;
       }
+      
+      .experience-details li {
+        margin-bottom: 0.5em;
+        font-size: 1em;
+        line-height: 1.4;
+      }
 
-      li a {
+      .nav-bar li a {
         position: relative;
         display: block;
         padding: 10px 40px;
@@ -148,32 +198,30 @@
         transition: border-color 0.3s ease;
       }
 
-      li a:hover {
+      .nav-bar li a:hover {
         border-bottom: 4px solid #00A0EC;
       }
 
-      li a[href="#experience"] {
+      .nav-bar li a[href="#experience"] {
         color: #9747FF;
         border-bottom: 4px solid #A020F0;
       }
-      
-      
     </style>
   </head>
-  
+
   <body>
-  <div class="webInfo">
+    <div class="webInfo">
       <!-- Navigation Bar -->
       <div class="nav-bar">
-      <ul>
-        <li><a href="https://soifa.github.io/Assignment-3/">Background</a></li>
-        <li><a href="https://soifa.github.io/interest/">Interest</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#artwork">Artwork</a></li>
-      </ul>
+        <ul>
+          <li><a href="https://soifa.github.io/Assignment-3/">Background</a></li>
+          <li><a href="https://soifa.github.io/interest/">Interest</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#artwork">Artwork</a></li>
+        </ul>
       </div>
-    
-    <!-- Instrument Title -->
+
+      <!-- Experience Title -->
       <div class="container">
         <div class="intro">
           <h1>
@@ -181,10 +229,63 @@
           </h1>
         </div>
       </div>
-    
-    
-    
-    <!-- Volunteer Title -->
+
+      <!-- Accounting -->
+      <div class="container">
+        <div class="experience-box">
+          <div class="experience-summary">
+            <p>Accounting<br>Bookkeeper</p>
+          </div>
+          <div class="experience-details">
+            <p><b>Benson Lam CPA · Sep 2021 ~ Dec 2021</b></p>
+            <ul>
+              <li>Maintained and processed invoices, deposits, and money logs.</li>
+              <li>Tracked expenses and income for business while organizing and maintaining bank statements for checking accounts.</li>
+              <li>Reconciled and corrected issues with financial records.</li>
+              <li>Answer client phone calls and assist walk-in clients.</li>
+              <li>Identified accounting errors when cross-referencing documents and database information.</li>
+              <li>Reported financial data and updated financial records in ledgers and journals.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Sun Life UX Jam -->
+        <div class="experience-box">
+          <div class="experience-summary">
+            <p>Sun Life UX<br>Design Jam</p>
+          </div>
+          <div class="experience-details">
+            <p><b>Sun Life · Oct 2024</b></p>
+            <ul>
+              <li>Collaborate with professional UX Designer in teams</li>
+              <li>Building a mature design with brainstorming, wireframe, user flow, prototype and display presentation within the limited time.</li>
+              <li>Presenting to Sunlife employees to market our design.</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+      
+       <div class="container">
+         <!-- Rogers UX Jam -->
+        <div class="experience-box">
+          <div class="experience-summary">
+            <p>Rogers UX<br>Design Jam</p>
+          </div>
+          <div class="experience-details">
+            <p><b>Rogers Sports &amp; Media · Jan 2025</b></p>
+            <ul>
+              <li>Building a mature marketing plan with Target Audience, Value Proposition, Marketing Strategy and Competitive Advantage within the limited time.</li>
+              <li>Presenting to managers and judges from Rogers to market our proposal.</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+      
+      
+      
+
+
+      <!-- Volunteer Title -->
       <div class="container">
         <div class="intro">
           <h1>
@@ -192,9 +293,9 @@
           </h1>
         </div>
       </div>
-    
+
     </div>
   </body>
-  
-  
+
+
 </html>
